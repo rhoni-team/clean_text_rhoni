@@ -66,3 +66,11 @@ class CleanText:
         Example: "Hola! cómo estás?" will be converted to "Hola cómo estás".
         """
         return re.sub(r'[^\w\s]', '', text)
+
+    def remove_n_tilde(self, text):
+        """
+        Remove the tilde from the n in the input text.
+
+        Example: "mañana" will be converted to "manana".
+        """
+        return re.sub(r'ñ', 'n', text)
