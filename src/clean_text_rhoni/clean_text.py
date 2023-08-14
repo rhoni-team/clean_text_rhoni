@@ -65,4 +65,4 @@ class CleanText:
         falls outside this category and removes them from the input text.
         Example: "Hola! cómo estás?" will be converted to "Hola cómo estás".
         """
-        re.sub(r'[^\w\s]', '', text)
+        return re.sub(r'[^\w\s]', '', text)
