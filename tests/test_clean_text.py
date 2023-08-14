@@ -84,7 +84,14 @@ class TestCleanText:
         result_text = self.clean_text_instance.remove_special_characters(
             raw_text)
         
-        print(expected_text)
-        print(result_text)
+        assert expected_text == result_text
+
+    def test_remove_n_tilde(self):
+        """
+        Test CleanText.remove_n_tilde function
+        """
+        raw_text = "mañana, ñandú, ñacurutú"
+        expected_text = "manana, nandú, nacurutú"
+        result_text = self.clean_text_instance.remove_n_tilde(raw_text)
 
         assert expected_text == result_text
