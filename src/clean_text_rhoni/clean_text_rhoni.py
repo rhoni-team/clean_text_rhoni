@@ -1,9 +1,9 @@
 """
 Main module.
-It imports the CleanText class with base functions to clean and normalize text,
-and derived functions that combines cleaning processes. 
+Import the CleanText class with base functions to clean and normalize text,
+and build derived functions that combines cleaning processes. 
 """
-from .clean_text import CleanText
+from clean_text_rhoni.clean_text import CleanText
 
 
 def complete_clean_text(text):
@@ -17,6 +17,7 @@ def complete_clean_text(text):
     3. Converting the text to lowercase.
     4. Removing accents from vowels.
     5. Removing special characters.
+    6. Removing tilde from ñ.
 
     Args:
         text (str): The input text to be cleaned.
@@ -31,6 +32,7 @@ def complete_clean_text(text):
     text = clean_text_utils.to_lowercase(text)
     text = clean_text_utils.remove_accents(text)
     text = clean_text_utils.remove_special_characters(text)
+    text = clean_text_utils.remove_n_tilde(text)
     return text
 
 def normalize_text(text):
@@ -44,7 +46,8 @@ def normalize_text(text):
     3. Converting the text to lowercase.
     4. Removing accents from vowels.
     5. Removing special characters.
-    6. Replacing spaces by underscores
+    6. Removing tilde from ñ.
+    7. Replacing spaces by underscores
 
     Args:
         text (str): The input text to be normalized.
