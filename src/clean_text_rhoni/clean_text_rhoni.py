@@ -6,7 +6,7 @@ and build derived functions that combines cleaning processes.
 from clean_text_rhoni.clean_text import CleanText
 
 
-def complete_clean_text(text):
+def clean_text(text):
     """
     Perform a complete text cleaning process on the input text.
 
@@ -35,9 +35,9 @@ def complete_clean_text(text):
     text = clean_text_utils.remove_n_tilde(text)
     return text
 
-def normalize_text(text):
+def clean_text_snake_case(text):
     """
-    Normalize an input text in a way that can be easily processed.
+    Perform a complete text cleaning process on the input text and transform it to snake case
 
     This function utilizes the `CleanText` utility class to perform a series of text cleaning operations,
     including:
@@ -53,11 +53,11 @@ def normalize_text(text):
         text (str): The input text to be normalized.
 
     Returns:
-        str: The normalized text after applying all cleaning operations.
+        str: Cleaned text in snake case style.
 
     Example: "   Hola Sofía!,   cómo estás?   " will be converted to "hola_sofia_como_estas".
     """
-    text = complete_clean_text(text=text)
+    text = clean_text(text=text)
     clean_text_utils = CleanText()
     text = clean_text_utils.replace_spaces_by_underscores(text)
     return text
