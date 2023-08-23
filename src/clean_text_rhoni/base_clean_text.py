@@ -66,7 +66,7 @@ class BaseCleanText:
         Replace spaces with underscores in the input text.
         Example: "hello world" will be converted to "hello_world".
         """
-        return re.sub('\s', '_', text)
+        return re.sub(r'\s', '_', text)
 
     def replace_underscores_by_spaces(self, text):
         """
