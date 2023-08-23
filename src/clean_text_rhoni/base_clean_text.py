@@ -2,7 +2,7 @@
 import re
 
 
-class CleanText:
+class BaseCleanText:
     """A utility class to clean and manipulate text"""
 
     def trim_leading_spaces(self, text):

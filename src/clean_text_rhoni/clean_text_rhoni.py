@@ -3,7 +3,7 @@ Main module.
 Import the CleanText class with base functions to clean and normalize text,
 and build derived functions that combines cleaning processes. 
 """
-from clean_text_rhoni.clean_text import CleanText
+from clean_text_rhoni.base_clean_text import BaseCleanText
 
 
 def clean_text(text):
@@ -26,7 +26,7 @@ def clean_text(text):
         str: The cleaned text after applying all cleaning operations.
     Example: "   Hola Sofía!,   cómo estás?   " will be converted to "hola sofia como estas".
     """
-    clean_text_utils = CleanText()
+    clean_text_utils = BaseCleanText()
     text = clean_text_utils.trim_leading_spaces(text)
     text = clean_text_utils.replace_multiple_spaces(text)
     text = clean_text_utils.to_lowercase(text)
@@ -58,6 +58,6 @@ def clean_text_snake_case(text):
     Example: "   Hola Sofía!,   cómo estás?   " will be converted to "hola_sofia_como_estas".
     """
     text = clean_text(text=text)
-    clean_text_utils = CleanText()
+    clean_text_utils = BaseCleanText()
     text = clean_text_utils.replace_spaces_by_underscores(text)
     return text
