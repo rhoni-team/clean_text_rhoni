@@ -5,14 +5,14 @@ import re
 class BaseCleanText:
     """A utility class to clean and manipulate text"""
 
-    def to_lowercase(self, text):
+    def transform_to_lowercase(self, text):
         """
         Convert the input text to lowercase.
         Example: "Hello World" will be converted to "hello world".
         """
         return text.lower()
 
-    def trim_leading_spaces(self, text):
+    def remove_leading_trailing_spaces(self, text):
         """
         Remove leading and trailing whitespaces from the input text.
         Example: "  hello world  " will be converted to "hello world".

@@ -10,9 +10,9 @@ def clean_text(text):
     """
     Perform a complete text cleaning process on the input text.
 
-    This function utilizes the `CleanText` utility class to perform a series of text cleaning operations,
+    This function utilizes the `BaseCleanText` utility class to perform a series of text cleaning operations,
     including:
-    1. Trimming leading and trailing spaces.
+    1. Removing leading and trailing spaces.
     2. Removing multiple spaces and replacing them with a single space.
     3. Converting the text to lowercase.
     4. Removing accents from vowels.
@@ -27,9 +27,9 @@ def clean_text(text):
     Example: "   Hola Sofía!,   cómo estás?   " will be converted to "hola sofia como estas".
     """
     clean_text_utils = BaseCleanText()
-    text = clean_text_utils.trim_leading_spaces(text)
+    text = clean_text_utils.remove_leading_trailing_spaces(text)
     text = clean_text_utils.replace_multiple_spaces(text)
-    text = clean_text_utils.to_lowercase(text)
+    text = clean_text_utils.transform_to_lowercase(text)
     text = clean_text_utils.remove_accents(text)
     text = clean_text_utils.remove_special_characters(text)
     text = clean_text_utils.remove_n_tilde(text)
@@ -39,9 +39,9 @@ def clean_text_snake_case(text):
     """
     Perform a complete text cleaning process on the input text and transform it to snake case
 
-    This function utilizes the `CleanText` utility class to perform a series of text cleaning operations,
+    This function utilizes the `BaseCleanText` utility class to perform a series of text cleaning operations,
     including:
-    1. Trimming leading and trailing spaces.
+    1. Removing leading and trailing space.
     2. Removing multiple spaces and replacing them with a single space.
     3. Converting the text to lowercase.
     4. Removing accents from vowels.
