@@ -70,4 +70,4 @@ Before you submit a pull request, check that it meets these guidelines:
 ## Code of Conduct
 
 Please note that the `clean_text_rhoni` project is released with a
-Code of Conduct. By contributing to this project you agree to abide by its terms.
+[Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
