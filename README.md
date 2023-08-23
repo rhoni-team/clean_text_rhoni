@@ -37,7 +37,7 @@ print(snake_case_cleaned_text) # abdc_efghi_n
 
 ```
 
-You can also access the base `class BaseCleanText` and use its methods separately:
+You can also access the `BaseCleanText` class and use its methods separately:
 
 ```bash
 from clean_text_rhoni.clean_text_rhoni import BaseCleanText
@@ -52,7 +52,7 @@ instance_base_clean_text.replace_underscores_by_spaces("hello_world") #'hello wo
 
 ```
 
-The `class BaseCleanText` has the following methods:
+The `BaseCleanText` class has the following methods:
 
 * `transform_to_lowercase(text)`: Converts the input text to lowercase.
 
