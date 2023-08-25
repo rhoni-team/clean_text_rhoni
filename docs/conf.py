@@ -21,7 +21,10 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
 ]
-autoapi_dirs = ["../src"]
+
+# autoapi
+autoapi_dirs = ["../src/clean_text_rhoni"]
+autoapi_options = [ 'members', 'undoc-members', 'show-inheritance', 'show-module-summary', 'special-members', 'imported-members', ]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
