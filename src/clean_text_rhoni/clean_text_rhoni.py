@@ -10,7 +10,7 @@ def clean_text(text):
     """
     Perform a complete text cleaning process on the input text.
 
-    This function utilizes the `BaseCleanText` utility class to perform a series of text cleaning operations,
+    This function performs a series of text cleaning operations,
     including:
     1. Removing leading and trailing spaces.
     2. Removing multiple spaces and replacing them with a single space.
@@ -24,6 +24,7 @@ def clean_text(text):
 
     Returns:
         str: The cleaned text after applying all cleaning operations.
+    
     Example: "   Hola Sofía!,   cómo estás?   " will be converted to "hola sofia como estas".
     """
     clean_text_utils = BaseCleanText()
@@ -39,7 +40,7 @@ def clean_text_snake_case(text):
     """
     Perform a complete text cleaning process on the input text and transform it to snake case
 
-    This function utilizes the `BaseCleanText` utility class to perform a series of text cleaning operations,
+    This function performs a series of text cleaning operations,
     including:
     1. Removing leading and trailing space.
     2. Removing multiple spaces and replacing them with a single space.
