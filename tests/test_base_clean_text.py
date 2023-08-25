@@ -12,29 +12,29 @@ class TestBaseCleanText:
         """
         cls.clean_text_instance = BaseCleanText()
 
-    def test_trim_leading_spaces(self):
+    def test_remove_leading_trailing_spaces(self):
         """
-        Test BaseCleanText.trim_leading_spaces function
+        Test BaseCleanText.remove_leading_trailing_spaces function
         """
         raw_text = "  Hubo un tiempo en que yo    pensaba mucho en los axólotl.   "
         expected_text = "Hubo un tiempo en que yo    pensaba mucho en los axólotl."
-        result_text = self.clean_text_instance.trim_leading_spaces(raw_text)
+        result_text = self.clean_text_instance.remove_leading_trailing_spaces(raw_text)
 
         assert expected_text == result_text
 
-    def test_to_lowercase(self):
+    def test_transform_to_lowercase(self):
         """
-        Test BaseCleanText.to_lowercase function
+        Test BaseCleanText.transform_to_lowercase function
         """
         raw_text = "  Hubo un Tiempo en que yo    Pensaba mucho en los axólotl.   "
         expected_text = "  hubo un tiempo en que yo    pensaba mucho en los axólotl.   "
-        result_text = self.clean_text_instance.to_lowercase(raw_text)
+        result_text = self.clean_text_instance.transform_to_lowercase(raw_text)
 
         assert expected_text == result_text
 
     def test_remove_accents(self):
         """
-        Test BaseCleanText.trim_leading_spaces function
+        Test BaseCleanText.remove_accents function
         """
         raw_text = "  Húbó un tíémpo en qué yo    pensábá mucho en los axólotl.   "
         expected_text = "  Hubo un tiempo en que yo    pensaba mucho en los axolotl.   "
