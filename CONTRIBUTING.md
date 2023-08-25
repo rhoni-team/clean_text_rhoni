@@ -38,11 +38,14 @@ If you are proposing a feature:
 * Remember that this is a volunteer-driven project, and that contributions
   are welcome :)
 
-## Get Started!
+# Get Started!
 
 Ready to contribute? Here's how to set up `clean_text_rhoni` for local development.
 
 ### Install the package for development
+
+This package is developed by using `poetry` as package manager.
+To install the package for development you will have to:
 
 1. Download a copy of `clean_text_rhoni` locally.
 2. Install `poetry` in your computer. Please check the last instalation instructions on their [website](https://python-poetry.org/).
@@ -52,7 +55,8 @@ Ready to contribute? Here's how to set up `clean_text_rhoni` for local developme
     ```console
     $ poetry install
     ```
-### Contribute
+
+### Create a new git branch
 
 1. Use `git` (or similar) to create a branch for local development and make your changes:
 
@@ -60,9 +64,37 @@ Ready to contribute? Here's how to set up `clean_text_rhoni` for local developme
     $ git checkout -b name-of-your-bugfix-or-feature
     ```
 
+### Contributions on code
+
+1. Code is located in `src/clean_text_rhoni` folder.
+You can add features, fix or refactor existing code.
+
 2. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
 
-3. Commit your changes and open a pull request.
+If you add new features: 
+
+* add the corresponding test in `test/` folder.
+* modify or add documentation if necessary
+
+This package uses [`pytest`](https://docs.pytest.org/en/7.4.x/) for testing.
+To run the package’s tests, you must be in the root of the package and run:
+
+```
+pytest tests/
+```
+
+3. Commit your changes following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
+
+
+### Contributions on documentation
+
+**Documenting functions and classes**
+
+We use [`numpydoc style`](https://numpydoc.readthedocs.io/en/latest/format.html) to add docstrings. Please follow its conventions.
+
+**Documenting README.md**
+You can add to the readme file examples or description of features if you consider that it is necessary.
+
 
 ## Pull Request Guidelines
 
