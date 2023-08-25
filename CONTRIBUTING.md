@@ -42,22 +42,27 @@ If you are proposing a feature:
 
 Ready to contribute? Here's how to set up `clean_text_rhoni` for local development.
 
+### Install the package for development
+
 1. Download a copy of `clean_text_rhoni` locally.
-2. Install `clean_text_rhoni` using `poetry`:
+2. Install `poetry` in your computer. Please check the last instalation instructions on their [website](https://python-poetry.org/).
+3. Create a python environment and activate it.
+4. Install `clean_text_rhoni` on editable-mode by using `poetry` in your environment:
 
     ```console
     $ poetry install
     ```
+### Contribute
 
-3. Use `git` (or similar) to create a branch for local development and make your changes:
+1. Use `git` (or similar) to create a branch for local development and make your changes:
 
     ```console
     $ git checkout -b name-of-your-bugfix-or-feature
     ```
 
-4. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
+2. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
 
-5. Commit your changes and open a pull request.
+3. Commit your changes and open a pull request.
 
 ## Pull Request Guidelines
 
