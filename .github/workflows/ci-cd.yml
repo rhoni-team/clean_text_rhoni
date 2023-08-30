@@ -31,7 +31,7 @@ jobs:
       run: poetry install
 
     - name: Test with pytest
-      run: poetry run pytest tests/ --cov=pycounts --cov-report=xml
+      run: poetry run pytest tests/ --cov=clean_text_rhoni --cov-report=xml
 
     - name: Build documentation
       run: poetry run make html --directory docs/
