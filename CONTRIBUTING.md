@@ -93,6 +93,7 @@ pytest tests/
 We use [`numpydoc style`](https://numpydoc.readthedocs.io/en/latest/format.html) to add docstrings. Please follow its conventions.
 
 **Documenting README.md**
+
 You can add examples or description of new features to the readme file if necessary.
 
 
