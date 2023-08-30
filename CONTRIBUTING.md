@@ -83,7 +83,7 @@ To run the package’s tests, you must be in the root of the package and run:
 pytest tests/
 ```
 
-3. Commit your changes following [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
+3. To commit your changes, please follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
 
 
 ### Contributions on documentation
@@ -93,7 +93,7 @@ pytest tests/
 We use [`numpydoc style`](https://numpydoc.readthedocs.io/en/latest/format.html) to add docstrings. Please follow its conventions.
 
 **Documenting README.md**
-You can add to the readme file examples or description of features if you consider that it is necessary.
+You can add examples or description of new features to the readme file if necessary.
 
 
 ## Pull Request Guidelines
