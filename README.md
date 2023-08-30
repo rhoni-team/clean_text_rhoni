@@ -19,7 +19,7 @@ This package has 2 main functions to clean a text:
 
 
 ```bash
-from clean_text_rhoni.clean_text_rhoni import clean_text, clean_text_snake_case
+from clean_text_rhoni import clean_text, clean_text_snake_case
 
 sample_text = "%ábdc    efghí   %$ñ"
 
@@ -40,7 +40,7 @@ print(snake_case_cleaned_text) # abdc_efghi_n
 You can also access the `BaseCleanText` class and use its methods separately:
 
 ```bash
-from clean_text_rhoni.clean_text_rhoni import BaseCleanText
+from clean_text_rhoni import BaseCleanText
 
 # create a class instance
 instance_base_clean_text = BaseCleanText()
