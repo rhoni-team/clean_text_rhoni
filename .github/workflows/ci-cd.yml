@@ -1,9 +1,6 @@
-# Name of the workflow
 name: ci-cd
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow
   push:
     branches: [ main ]
   pull_request:
