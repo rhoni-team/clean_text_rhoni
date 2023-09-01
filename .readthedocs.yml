@@ -11,7 +11,7 @@ build:
 
 # Configuration
 python:
-  version: 3.9
+  version: 3.x
   install:
     - requirements: docs/requirements.txt
     - method: pip
