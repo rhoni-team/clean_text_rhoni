@@ -1,0 +1,18 @@
+version: '3'
+services:
+  py38:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.py38
+  py39:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.py39
+  py310:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.py310
+  py311:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile.py311
