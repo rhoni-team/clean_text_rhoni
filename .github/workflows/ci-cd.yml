@@ -38,10 +38,10 @@ jobs:
     - name: Install package
       run: poetry install
 
-    - name: Run tests
+    - name: Test with pytest
       run: |
-      source .venv/bin/activate
-      poetry run pytest tests/ --cov=clean_text_rhoni --cov-report=xml
+          source .venv/bin/activate
+          poetry run pytest tests/ --cov=clean_text_rhoni --cov-report=xml
 
     - name: Build documentation
       run: poetry run make html --directory docs/
