@@ -64,6 +64,11 @@ To install the package for development you will have to:
     $ git checkout -b name-of-your-bugfix-or-feature
     ```
 
+### Commiting changes
+
+To commit your changes, please follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
+
+
 ### Contributions on code
 
 1. Code is located in `src/clean_text_rhoni` folder.
@@ -76,6 +81,9 @@ If you add new features:
 * add the corresponding test in `test/` folder.
 * modify or add documentation if necessary
 
+
+### Testing the package
+
 This package uses [`pytest`](https://docs.pytest.org/en/7.4.x/) for testing.
 To run the package’s tests, you must be in the root of the package and run:
 
@@ -83,8 +91,35 @@ To run the package’s tests, you must be in the root of the package and run:
 pytest tests/
 ```
 
-3. To commit your changes, please follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
+**Testing the package on different python versions**
 
+This package was developed on Ubuntu 22.04 and tested on python 3.8, 3.9, 3.10 and 3.11.
+If you add new features, you have to test that the package is still working under the different versions.
+The easiest way to do this, is by using [`Docker Compose`](https://docs.docker.com/compose/). The necessary `Dockerfiles` and the `docker-compose.yml` file are included in the package.
+To run it, you'll have to:
+
+1. Install [`docker`](https://docs.docker.com/engine/install/) in your computer.
+2. Install [`docker compose`](https://docs.docker.com/compose/install/) in your computer.
+3. Build the docker images defined in `docker-compose.yml`.
+Open a terminal and go to the root of the package. Then run:
+
+```bash
+docker compose build
+```
+4. Start the services:
+
+```bash
+docker compose up
+```
+
+As result you will have to see that code coverage is calculated for each python version, and that every process is exited with code 0. This is, the processes were completed successfully without encountering any errors.
+
+You will see something similar to:
+
+```bash
+clean_text_rhoni-py38-1 exited with code 0
+```
+for each python version that is being tested.
 
 ### Contributions on documentation
 
