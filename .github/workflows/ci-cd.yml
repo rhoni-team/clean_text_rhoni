@@ -46,9 +46,10 @@ jobs:
       run: poetry install
 
     - name: Test with pytest
-      run: |
-          source .venv/bin/activate
-          poetry run pytest tests/ --cov=clean_text_rhoni --cov-report=xml
+      run: poetry run pytest tests/ --cov=clean_text_rhoni --cov-report=xml
+
+    - name: Linting and formatting
+      run: make lint
 
     - name: Build documentation
       run: poetry run make html --directory docs/
