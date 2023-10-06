@@ -3,6 +3,9 @@
 
 from clean_text_rhoni.base_clean_text import BaseCleanText
 
+# pylint: disable=no-self-argument
+# pylint: disable=attribute-defined-outside-init
+
 
 class TestBaseCleanText:
     """Class to with unit tests for CleanText
@@ -69,7 +72,7 @@ class TestBaseCleanText:
             raw_text)
 
         assert expected_text == result_text
-    
+
     def test_remove_special_characters(self):
         """Test BaseCleanText.remove_special_characters function
         """
@@ -77,7 +80,7 @@ class TestBaseCleanText:
         expected_text = "  Hubo un Tiempo en que yo    Pensaba mucho en los axólotl   "
         result_text = self.clean_text_instance.remove_special_characters(
             raw_text)
-        
+
         assert expected_text == result_text
 
     def test_remove_n_tilde(self):
