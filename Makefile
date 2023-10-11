@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 .PHONY: test
 test:
-	poetry run pytest ./tests
+	poetry run pytest tests/ --cov=clean_text_rhoni
 
 .PHONY: lint
 lint:
