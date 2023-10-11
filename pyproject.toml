@@ -14,8 +14,7 @@ python = ">=3.8"
 [tool.poetry.group.dev.dependencies]
 pytest = ">=7.4.0"
 pytest-cov = ">=4.1.0"
-myst-nb = {version = ">=0.17.2", python = ">=3.8,<4.0"}
-sphinx-autoapi = ">=2.1.1"
+sphinx-autoapi = ">=3.0.0"
 sphinx-rtd-theme = ">=1.2.2"
 python-semantic-release = ">=8.0.8"
 pylint = ">=3.0.1"
