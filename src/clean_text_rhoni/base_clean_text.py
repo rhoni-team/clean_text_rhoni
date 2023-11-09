@@ -26,10 +26,10 @@ class BaseCleanText:
         "hello world"
         """
         return text.strip()
-    
+
     def replace_multiple_spaces(self, text):
         """Remove multiple spaces in the input text and replace them with a single space.
-        
+
         Examples
         --------
         >>> replace_multiple_spaces("hello   world")
@@ -51,17 +51,17 @@ class BaseCleanText:
         nor whitespace characters.
         """
         return re.sub(r'[^\w\s]', '', text)
-    
+
     def remove_accents(self, text):
         """Remove accents from vowels in the input text.
-        
+
         Examples
         --------
         >>> remove_accents("café")
         "cafe"
         """
         return re.sub(r'([á-úÁ-Ú])', self.__check_vowel, text)
-    
+
     def __check_vowel(self, text):
         """Checks if there is any vowel with accents
         """
@@ -81,7 +81,7 @@ class BaseCleanText:
         "manana"
         """
         return re.sub(r'ñ', 'n', text)
-    
+
     def replace_spaces_by_underscores(self, text):
         """
         Replace spaces with underscores in the input text.

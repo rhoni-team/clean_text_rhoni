@@ -16,11 +16,16 @@ author = u"rhoni"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_nb",
+    'myst_parser',
     "autoapi.extension",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
 ]
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # autoapi
 autoapi_dirs = ["../src/clean_text_rhoni"]

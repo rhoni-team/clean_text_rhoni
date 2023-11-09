@@ -1,7 +1,7 @@
 """Main module.
 
 Import the BaseCleanText class with base functions to clean and normalize text,
-and build derived functions that combines cleaning processes. 
+and build derived functions that combines cleaning processes.
 """
 from clean_text_rhoni.base_clean_text import BaseCleanText
 
@@ -27,7 +27,7 @@ def clean_text(text):
     -------
     text: str
         The cleaned text after applying all cleaning operations.
-    
+
     Examples
     --------
     >>> clean_text("   Hola Sofía!,   cómo estás?   ")
@@ -41,6 +41,7 @@ def clean_text(text):
     text = clean_text_utils.remove_special_characters(text)
     text = clean_text_utils.remove_n_tilde(text)
     return text
+
 
 def clean_text_snake_case(text):
     """Perform a complete text cleaning process on the input text and transform it to snake case

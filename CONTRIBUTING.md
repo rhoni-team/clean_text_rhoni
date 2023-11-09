@@ -69,7 +69,7 @@ To install the package for development you will have to:
 To commit your changes, please follow the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) conventions.
 
 
-### Contributions on code
+## Contributions on code
 
 1. Code is located in `src/clean_text_rhoni` folder.
 You can add features, fix or refactor existing code.
@@ -121,7 +121,7 @@ clean_text_rhoni-py38-1 exited with code 0
 ```
 for each python version that is being tested.
 
-### Contributions on documentation
+## Contributions on documentation
 
 **Documenting functions and classes**
 
@@ -143,4 +143,4 @@ Before you submit a pull request, check that it meets these guidelines:
 ## Code of Conduct
 
 Please note that the `clean_text_rhoni` project is released with a
-[Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Code of Conduct. By contributing to this project you agree to abide by its terms.
