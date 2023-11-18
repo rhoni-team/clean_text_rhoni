@@ -37,7 +37,7 @@ dist_path = "dist/"
 upload_to_release = true
 upload_to_pypi = false
 remove_dist = false
-patch_without_tag = false
+patch_without_tag = true
 
 [tool.autopep8]
 max_line_length = 120
