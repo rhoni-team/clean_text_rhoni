@@ -102,10 +102,12 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        pip install python-semantic-release
         git config user.name github-actions
         git config user.email github-actions@github.com
-        semantic-release publish
+        poetry semantic-release publish
+
+    - name: List contents of dist/
+      run: ls -l dist/
 
     # - name: Use Python Semantic Release to prepare release
     #   env:
