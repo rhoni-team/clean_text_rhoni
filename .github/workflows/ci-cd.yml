@@ -112,8 +112,8 @@ jobs:
         poetry run semantic-release changelog --verbosity=DEBUG
         poetry run semantic-release publish --verbosity=DEBUG
 
-    - name: List contents of dist/
-      run: ls -l dist/
+    - name: List contents of current directory
+      run: ls -l ./
 
     # - name: Use Python Semantic Release to prepare release
     #   env:
