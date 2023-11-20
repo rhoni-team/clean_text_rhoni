@@ -108,9 +108,9 @@ jobs:
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        poetry run semantic-release version --verbosity=DEBUG
-        poetry run semantic-release changelog --verbosity=DEBUG
-        poetry run semantic-release publish --verbosity=DEBUG
+        poetry run semantic-release version
+        poetry run semantic-release changelog
+        poetry run semantic-release publish
         ls -l ./
 
     - name: List contents of current directory
