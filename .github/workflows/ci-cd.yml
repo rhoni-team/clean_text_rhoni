@@ -111,6 +111,7 @@ jobs:
         poetry run semantic-release version --verbosity=DEBUG
         poetry run semantic-release changelog --verbosity=DEBUG
         poetry run semantic-release publish --verbosity=DEBUG
+        ls -l ./
 
     - name: List contents of current directory
       run: ls -l ./
