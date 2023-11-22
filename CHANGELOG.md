@@ -2,6 +2,19 @@
 
 
 
+## v0.1.3 (2023-11-22)
+
+### Fix
+
+* fix: cleaning ci from debugging steps ([`7650ac7`](https://github.com/rhoni-team/clean_text_rhoni/commit/7650ac7140ff371b78221318e47b56cd304088b6))
+
+### Unknown
+
+* Merge pull request #26 from rhoni-team/2.cd_and_test_pypi
+
+fix: cleaning ci from debugging steps ([`df52d8a`](https://github.com/rhoni-team/clean_text_rhoni/commit/df52d8ab84e311ea737685a02a6466b44e82e596))
+
+
 ## v0.1.2 (2023-11-22)
 
 ### Ci
