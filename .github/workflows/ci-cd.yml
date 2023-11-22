@@ -1,8 +1,6 @@
-name: ci-cd
+name: Continuous Integration
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -54,6 +52,12 @@ jobs:
     - name: Build documentation
       run: poetry run make html --directory docs/
 
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ main ]
+  
   cd:
     needs: ci
 
