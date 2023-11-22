@@ -2,6 +2,29 @@
 
 
 
+## v0.1.2 (2023-11-22)
+
+### Ci
+
+* ci: debugging listing directories ([`6a03eda`](https://github.com/rhoni-team/clean_text_rhoni/commit/6a03eda93675fee61e2a3491caa4de62ab73278c))
+
+* ci: change version variable ([`a7933f9`](https://github.com/rhoni-team/clean_text_rhoni/commit/a7933f9670c0f0d556c61296df619627e368f8d5))
+
+### Fix
+
+* fix: change version variable of semantic release ([`208bba4`](https://github.com/rhoni-team/clean_text_rhoni/commit/208bba47cee179537de15ce383dad5a31bca6bce))
+
+### Unknown
+
+* Merge pull request #25 from rhoni-team/2.cd_and_test_pypi
+
+2.cd and test pypi ([`47cdc5c`](https://github.com/rhoni-team/clean_text_rhoni/commit/47cdc5cf7bee268efcb79c99a88322af8c862f0b))
+
+* Merge pull request #24 from rhoni-team/2.cd_and_test_pypi
+
+ci: change version variable ([`d335f5f`](https://github.com/rhoni-team/clean_text_rhoni/commit/d335f5f640d86c86a01f841b35a2c760eca9b3ca))
+
+
 ## v0.1.1 (2023-11-20)
 
 ### Chore
