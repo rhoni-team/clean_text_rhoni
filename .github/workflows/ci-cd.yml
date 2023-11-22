@@ -117,8 +117,8 @@ jobs:
         poetry run semantic-release publish
         ls -l ./
 
-    - name: List contents of current directory
-      run: ls -l ./
+    - name: List contents of dist
+      run: ls -l ./dist
 
     # - name: Use Python Semantic Release to prepare release
     #   env:
