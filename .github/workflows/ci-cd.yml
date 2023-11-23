@@ -1,18 +1,10 @@
 name: ci-cd
 
-on:  
-  pull_request:
-    branches: [ main ]
-  push:
-    branches: [ main ]
-
 jobs: 
   call-ci:
-    if: github.event_name == 'pull_request'
     uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@27.fix_ci_running_2_times
 
   call-cd:
-    if: github.event_name == 'push'
     needs: call-ci
     uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@27.fix_ci_running_2_times
     secrets:

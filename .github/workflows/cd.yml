@@ -7,7 +7,6 @@ on:
         required: true
       test_pypi_api_token:
         required: true
-      
   push:
     branches: [ main ]
 
