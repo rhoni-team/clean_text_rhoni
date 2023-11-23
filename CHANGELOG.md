@@ -2,6 +2,37 @@
 
 
 
+## v0.1.4 (2023-11-23)
+
+### Ci
+
+* ci: add permissions to cd workflow ([`4affb2b`](https://github.com/rhoni-team/clean_text_rhoni/commit/4affb2bbefab5b2e38f00d2725ceb884f37079ba))
+
+* ci: fix branch tag name ([`b4896c8`](https://github.com/rhoni-team/clean_text_rhoni/commit/b4896c800ad38c2f9480788bb8e837edd9251d91))
+
+* ci: add tags ([`c3eafc1`](https://github.com/rhoni-team/clean_text_rhoni/commit/c3eafc18c6688fecccca53a0b60005eec605e714))
+
+* ci: remove ref main from cd ([`99ecce2`](https://github.com/rhoni-team/clean_text_rhoni/commit/99ecce20f769458c35ac9d7f406b3d6c85eaa3e5))
+
+* ci: fix identation of jobs ([`f97c9b2`](https://github.com/rhoni-team/clean_text_rhoni/commit/f97c9b23288e37477fbebfb0ac86f708363c8260))
+
+* ci: remove ref main from pull request conditional ([`cbd4cb3`](https://github.com/rhoni-team/clean_text_rhoni/commit/cbd4cb3b2e7f5b63a1b8aeae734bffed4e87706d))
+
+* ci: add needs ci to cd ([`ddc10b5`](https://github.com/rhoni-team/clean_text_rhoni/commit/ddc10b56a9b3cd257496e189dc5422798ac5d635))
+
+### Fix
+
+* fix: test change workflow to reusable worflows ([`a58c77f`](https://github.com/rhoni-team/clean_text_rhoni/commit/a58c77f0395886c3ba88ca9d4f1a632c2be89f84))
+
+* fix: runs ci on pull request and cd on push ([`504189b`](https://github.com/rhoni-team/clean_text_rhoni/commit/504189b20efa4ca1457abfc198864a8a2d228c9a))
+
+### Unknown
+
+* Merge pull request #28 from rhoni-team/27.fix_ci_running_2_times
+
+27.fix ci running 2 times ([`f510146`](https://github.com/rhoni-team/clean_text_rhoni/commit/f510146bc29a9ac4028de232847a6f02fb45b09f))
+
+
 ## v0.1.3 (2023-11-22)
 
 ### Fix

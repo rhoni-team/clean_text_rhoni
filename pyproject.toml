@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "clean_text_rhoni"
-version = "0.1.3"
+version = "0.1.4"
 description = "package to clean and normalize text"
 authors = ["rhoni"]
 license = "MIT"
