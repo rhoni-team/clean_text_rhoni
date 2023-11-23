@@ -2,6 +2,23 @@
 
 
 
+## v0.1.8 (2023-11-23)
+
+### Ci
+
+* ci: add pypi token ([`9519650`](https://github.com/rhoni-team/clean_text_rhoni/commit/95196508736d234a119c20938c92e739c835839e))
+
+### Fix
+
+* fix: add conditional to test pypi step ([`27205f4`](https://github.com/rhoni-team/clean_text_rhoni/commit/27205f4cefafd577f7feddd16715967e0cebf00d))
+
+### Unknown
+
+* Merge pull request #33 from rhoni-team/27.fix_ci_running_2_times
+
+fix: add conditional to test pypi step ([`189e646`](https://github.com/rhoni-team/clean_text_rhoni/commit/189e6469cf4d4c5703ffd824bddb2f10c44b49b3))
+
+
 ## v0.1.7 (2023-11-23)
 
 ### Ci
