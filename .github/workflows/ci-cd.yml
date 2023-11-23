@@ -1,128 +1,19 @@
-name: Continuous Integration
+name: ci-cd
 
-on:
+on:  
   pull_request:
     branches: [ main ]
-
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11"]
-    
-    steps:
-    - name: Check-out repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-
-    - name: Load pip cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip
-        restore-keys: ${{ runner.os }}-pip
-
-    - name: Install Poetry
-      uses: snok/install-poetry@v1
-      with:
-        virtualenvs-create: true
-        virtualenvs-in-project: true
-
-    - name: Load cached venv
-      id: cached-poetry-dependencies
-      uses: actions/cache@v3
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-
-    - name: Install package
-      run: poetry install
-
-    - name: Test with pytest
-      run: make test
-
-    - name: Linting and formatting
-      run: make lint
-
-    - name: Build documentation
-      run: poetry run make html --directory docs/
-
-name: Continuous Deployment
-
-on:
   push:
     branches: [ main ]
-  
-  cd:
-    needs: ci
 
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  jobs: 
+    call-ci:
+      if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
+      uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml
 
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
-    permissions:
-      id-token: write
-      contents: write
-
-    steps:
-    - name: Check-out repository
-      uses: actions/checkout@v3
-      with:
-          token: ${{ secrets.SEMANTIC_RELEASE_KEY }}
-          fetch-depth: 0
-
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-
-    - name: Load pip cache
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip
-        restore-keys: ${{ runner.os }}-pip
-
-    - name: Install Poetry
-      uses: snok/install-poetry@v1
-      with:
-        virtualenvs-create: true
-        virtualenvs-in-project: true
-
-    - name: Load cached venv
-      id: cached-poetry-dependencies
-      uses: actions/cache@v3
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-
-    - name: Install package
-      run: poetry install
-
-    - name: Semantic Release
-      env:
-        GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_KEY }}
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        poetry run semantic-release version
-        poetry run semantic-release changelog
-        poetry run semantic-release publish
-
-    - name: Publish to TestPyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        user: __token__
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        repository-url: https://test.pypi.org/legacy/
-
-    - name: Test install package from TestPyPI
-      run: |
-          pip install -i https://test.pypi.org/simple/ clean-text-rhoni
+    call-ci:
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml
+      secrets:
+        semantic_release_key: ${{ secrets.SEMANTIC_RELEASE_KEY }}
+        test_pypi_api_token: ${{ secrets.TEST_PYPI_API_TOKEN }}
