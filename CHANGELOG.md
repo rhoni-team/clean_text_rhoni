@@ -2,6 +2,25 @@
 
 
 
+## v0.1.7 (2023-11-23)
+
+### Ci
+
+* ci: fix branch tag name ([`de34b52`](https://github.com/rhoni-team/clean_text_rhoni/commit/de34b5201a4b668f2d1ef991250f9696173311ca))
+
+* ci: run on published release ([`971a837`](https://github.com/rhoni-team/clean_text_rhoni/commit/971a8376fcc100412ca5c76e51473f09f436b692))
+
+### Fix
+
+* fix: publish to test pypi on release ([`ebfd12a`](https://github.com/rhoni-team/clean_text_rhoni/commit/ebfd12aaa7f09104db91f54af1ec08e638a023e7))
+
+### Unknown
+
+* Merge pull request #32 from rhoni-team/27.fix_ci_running_2_times
+
+27.fix ci running 2 times ([`7f9c189`](https://github.com/rhoni-team/clean_text_rhoni/commit/7f9c1895c1ad05188a0ba1404a578763edda328f))
+
+
 ## v0.1.6 (2023-11-23)
 
 ### Fix
