@@ -11,8 +11,9 @@ on:
       if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
       uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml
 
-    call-ci:
+    call-cd:
       if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      needs: call-ci
       uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml
       secrets:
         semantic_release_key: ${{ secrets.SEMANTIC_RELEASE_KEY }}
