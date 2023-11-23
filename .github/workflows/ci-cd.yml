@@ -12,7 +12,7 @@ jobs:
     uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@27.fix_ci_running_2_times
 
   call-cd:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: call-ci
     uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@27.fix_ci_running_2_times
     secrets:
