@@ -1,0 +1,78 @@
+name: Continuous Deployment
+
+on:
+  workflow_call:
+    secrets:
+      semantic_release_key:
+        required: true
+      test_pypi_api_token:
+        required: true
+      
+  push:
+    branches: [ main ]
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+    permissions:
+      id-token: write
+      contents: write
+
+    steps:
+    - name: Check-out repository
+      uses: actions/checkout@v3
+      with:
+          token: ${{ secrets.semantic_release_key }}
+          fetch-depth: 0
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Load pip cache
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip
+        restore-keys: ${{ runner.os }}-pip
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+
+    - name: Load cached venv
+      id: cached-poetry-dependencies
+      uses: actions/cache@v3
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+    - name: Install package
+      run: poetry install
+
+    - name: Semantic Release
+      env:
+        GH_TOKEN: ${{ secrets.semantic_release_key }}
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        poetry run semantic-release version
+        poetry run semantic-release changelog
+        poetry run semantic-release publish
+
+    - name: Publish to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.test_pypi_api_token }}
+        repository-url: https://test.pypi.org/legacy/
+
+    - name: Test install package from TestPyPI
+      run: |
+          pip install -i https://test.pypi.org/simple/ clean-text-rhoni
