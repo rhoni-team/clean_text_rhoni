@@ -5,6 +5,8 @@ on:
     secrets:
       semantic_release_key:
         required: true
+      test_pypi_api_token:
+        required: true
 
 jobs:
   cd:
