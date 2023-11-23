@@ -2,6 +2,29 @@
 
 
 
+## v0.1.5 (2023-11-23)
+
+### Ci
+
+* ci: using conditional logic ([`b8dc3ad`](https://github.com/rhoni-team/clean_text_rhoni/commit/b8dc3ad9231f05eec1b830b52aab7343a78b0ac9))
+
+### Fix
+
+* fix: remove needs from cd ([`10979c4`](https://github.com/rhoni-team/clean_text_rhoni/commit/10979c4bfb65b00ed8d6bab526a6c3cc95491fd9))
+
+* fix: trigger worflows in their own files ([`fc93474`](https://github.com/rhoni-team/clean_text_rhoni/commit/fc93474ffc82efb2b46c6c5f0430187d6738de09))
+
+### Unknown
+
+* Merge pull request #30 from rhoni-team/27.fix_ci_running_2_times
+
+fix: remove needs from cd ([`9dcecfa`](https://github.com/rhoni-team/clean_text_rhoni/commit/9dcecfa46d0377368acd57f6b22122bed119738e))
+
+* Merge pull request #29 from rhoni-team/27.fix_ci_running_2_times
+
+fix: trigger worflows in their own files ([`2c530b8`](https://github.com/rhoni-team/clean_text_rhoni/commit/2c530b896ea9060e15f303afa1773497214b0307))
+
+
 ## v0.1.4 (2023-11-23)
 
 ### Ci
