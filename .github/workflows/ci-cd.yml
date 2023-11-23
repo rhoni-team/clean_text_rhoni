@@ -8,7 +8,7 @@ on:
 
   jobs: 
     call-ci:
-      if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
+      if: github.event_name == 'pull_request'
       uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml
 
     call-cd:
