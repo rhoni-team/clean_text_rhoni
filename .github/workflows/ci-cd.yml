@@ -2,22 +2,24 @@ name: ci-cd
 
 on:  
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
   push:
-    branches: [ main ]
-    tags-ignore: [ '**' ]
+    branches:
+      - main
+    tags-ignore:
+      - '**'
 
 jobs: 
   call-ci:
     if: github.event_name == 'pull_request'
-    uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@27.fix_ci_running_2_times
+    uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@27.fix_running_2_times
 
   call-cd:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@27.fix_ci_running_2_times
+    uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@27.fix_running_2_times
     secrets:
       semantic_release_key: ${{ secrets.SEMANTIC_RELEASE_KEY }}
-      test_pypi_api_token: ${{ secrets.TEST_PYPI_API_TOKEN }}
     permissions:
       contents: write
       id-token: write
