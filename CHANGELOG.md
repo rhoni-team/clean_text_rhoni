@@ -2,6 +2,19 @@
 
 
 
+## v0.1.6 (2023-11-23)
+
+### Fix
+
+* fix: ignore tags on push trigger ([`22fce0f`](https://github.com/rhoni-team/clean_text_rhoni/commit/22fce0fbf09d82a94c5153113b21202bb5d889d1))
+
+### Unknown
+
+* Merge pull request #31 from rhoni-team/27.fix_ci_running_2_times
+
+fix: ignore tags on push trigger ([`44d1b43`](https://github.com/rhoni-team/clean_text_rhoni/commit/44d1b43dd352a006150b13df344dd85689021556))
+
+
 ## v0.1.5 (2023-11-23)
 
 ### Ci
