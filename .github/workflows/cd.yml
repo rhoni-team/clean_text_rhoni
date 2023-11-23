@@ -5,6 +5,8 @@ on:
     secrets:
       semantic_release_key:
         required: true
+      test_pypi_api_token:
+        required: true
 
 jobs:
   cd:
@@ -60,3 +62,15 @@ jobs:
         poetry run semantic-release version
         poetry run semantic-release changelog
         poetry run semantic-release publish
+    
+    - name: Publish to TestPyPI
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.test_pypi_api_token }}
+        repository-url: https://test.pypi.org/legacy/
+
+    - name: Test install package from TestPyPI
+      run: |
+          pip install -i https://test.pypi.org/simple/ clean-text-rhoni
