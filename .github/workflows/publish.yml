@@ -1,0 +1,54 @@
+name: Publish to Test Pypi and Pypi
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+    - name: Check-out repository
+      uses: actions/checkout@v3
+      with:
+          # token: ${{ secrets.SEMANTIC_RELEASE_KEY }}
+          fetch-depth: 0
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+
+    - name: Load cached venv
+      id: cached-poetry-dependencies
+      uses: actions/cache@v3
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+    - name: Install package
+      run: poetry install
+
+    - name: build dist
+      run: poetry build
+
+    - name: Publish to TestPyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: __token__
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        repository-url: https://test.pypi.org/legacy/
+
+    - name: Test install package from TestPyPI
+      run: |
+          pip install -i https://test.pypi.org/simple/ clean-text-rhoni
