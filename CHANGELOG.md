@@ -2,6 +2,19 @@
 
 
 
+## v0.1.9 (2023-11-24)
+
+### Fix
+
+* fix: ci publish on release ([`5a28b45`](https://github.com/rhoni-team/clean_text_rhoni/commit/5a28b452b4b7d28f9f5da3f5d5b36d158ca4ecd6))
+
+### Unknown
+
+* Merge pull request #34 from rhoni-team/27.fix_ci_running_2_times
+
+fix: ci publish on release ([`7b79ed3`](https://github.com/rhoni-team/clean_text_rhoni/commit/7b79ed3ea8dad8ff40287f36a95e27ebacfa5ef5))
+
+
 ## v0.1.8 (2023-11-23)
 
 ### Ci
