@@ -2,7 +2,7 @@ name: Publish to Test Pypi and Pypi
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   publish:
@@ -15,7 +15,6 @@ jobs:
     - name: Check-out repository
       uses: actions/checkout@v3
       with:
-          # token: ${{ secrets.SEMANTIC_RELEASE_KEY }}
           fetch-depth: 0
 
     - name: Set up Python ${{ matrix.python-version }}
