@@ -2,6 +2,19 @@
 
 
 
+## v0.1.10 (2023-11-24)
+
+### Fix
+
+* fix: change publish on published release ([`d8e93d1`](https://github.com/rhoni-team/clean_text_rhoni/commit/d8e93d11c6b7c68c43816e10729be19cd671ff48))
+
+### Unknown
+
+* Merge pull request #35 from rhoni-team/27.fix_ci_running_2_times
+
+fix: change publish on published release ([`14b56f7`](https://github.com/rhoni-team/clean_text_rhoni/commit/14b56f773a82e770cf8c3b5d0a3bb6ad5c38a050))
+
+
 ## v0.1.9 (2023-11-24)
 
 ### Fix
