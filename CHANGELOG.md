@@ -2,6 +2,19 @@
 
 
 
+## v0.1.12 (2023-12-04)
+
+### Fix
+
+* fix(ci): add permission to write and environment name ([`ab359d9`](https://github.com/rhoni-team/clean_text_rhoni/commit/ab359d970764967eedb253c60729d2600d85429d))
+
+### Unknown
+
+* Merge pull request #39 from rhoni-team/37.change_publish_testpypi_step
+
+fix(ci): add permission to write and environment name ([`24c6222`](https://github.com/rhoni-team/clean_text_rhoni/commit/24c62226e754b8017997087e91d34c67450afcb0))
+
+
 ## v0.1.11 (2023-12-04)
 
 ### Ci
