@@ -52,3 +52,6 @@ jobs:
     - name: Test install package from TestPyPI
       run: |
           pip install -i https://test.pypi.org/simple/ clean-text-rhoni
+    
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
