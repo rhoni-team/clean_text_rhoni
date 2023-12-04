@@ -5,6 +5,8 @@ description = "package to clean and normalize text"
 authors = ["rhoni"]
 license = "MIT"
 readme = "README.md"
+documentation = "https://clean-text-rhoni.readthedocs.io/en/latest/"
+repository = "https://github.com/rhoni-team/clean_text_rhoni"
 
 [tool.poetry.dependencies]
 python = ">=3.8"
