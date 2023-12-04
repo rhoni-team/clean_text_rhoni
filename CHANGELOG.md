@@ -2,6 +2,19 @@
 
 
 
+## v0.1.14 (2023-12-04)
+
+### Fix
+
+* fix: add documentation and repository links ([`186c519`](https://github.com/rhoni-team/clean_text_rhoni/commit/186c5198d70a674a710666b01fadeccf5b6051ce))
+
+### Unknown
+
+* Merge pull request #41 from rhoni-team/37.change_publish_testpypi_step
+
+fix: add documentation and repository links ([`18766d9`](https://github.com/rhoni-team/clean_text_rhoni/commit/18766d9913320b4199195996ddca47654e15f9a6))
+
+
 ## v0.1.13 (2023-12-04)
 
 ### Fix
