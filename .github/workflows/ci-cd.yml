@@ -11,11 +11,11 @@ on:
 jobs: 
   call-ci:
     if: github.event_name == 'pull_request'
-    uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@27.fix_ci_running_2_times
+    uses: rhoni-team/clean_text_rhoni/.github/workflows/ci.yml@main
 
   call-cd:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@27.fix_ci_running_2_times
+    uses: rhoni-team/clean_text_rhoni/.github/workflows/cd.yml@main
     secrets:
       semantic_release_key: ${{ secrets.SEMANTIC_RELEASE_KEY }}
     permissions:
