@@ -2,6 +2,29 @@
 
 
 
+## v0.1.11 (2023-12-04)
+
+### Ci
+
+* ci: update test pypi step to trusted publisher ([`a7f96f2`](https://github.com/rhoni-team/clean_text_rhoni/commit/a7f96f2163bff0bfa5d840e29eec8b3bc1b1d0e1))
+
+* ci: clean ci files ([`bdbe306`](https://github.com/rhoni-team/clean_text_rhoni/commit/bdbe306b3b55ac1d68d82f4fd04e3c7f250e3143))
+
+### Fix
+
+* fix(ci): change branch to main in call jobs ([`f6b470a`](https://github.com/rhoni-team/clean_text_rhoni/commit/f6b470a2273e74705dad9f9a4dbed64075bc2751))
+
+### Unknown
+
+* Merge pull request #38 from rhoni-team/37.change_publish_testpypi_step
+
+37.change publish testpypi step ([`49ce012`](https://github.com/rhoni-team/clean_text_rhoni/commit/49ce01237e8b446740d774da81fe716e5de299cb))
+
+* Merge pull request #36 from rhoni-team/27.fix_ci_running_2_times
+
+ci: clean ci files ([`7a9b68f`](https://github.com/rhoni-team/clean_text_rhoni/commit/7a9b68f801fde15116cd46a56249b3ea25ea3e6b))
+
+
 ## v0.1.10 (2023-11-24)
 
 ### Fix
