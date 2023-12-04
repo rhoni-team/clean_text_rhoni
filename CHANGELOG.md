@@ -2,6 +2,19 @@
 
 
 
+## v0.1.13 (2023-12-04)
+
+### Fix
+
+* fix(ci): add publish to pypi ([`1216848`](https://github.com/rhoni-team/clean_text_rhoni/commit/1216848ad5192e8c925fa8a28af1574fadf5dedb))
+
+### Unknown
+
+* Merge pull request #40 from rhoni-team/37.change_publish_testpypi_step
+
+fix(ci): add publish to pypi ([`3bde341`](https://github.com/rhoni-team/clean_text_rhoni/commit/3bde34160c8e982dd489c4d0d729309254b5e0bb))
+
+
 ## v0.1.12 (2023-12-04)
 
 ### Fix
